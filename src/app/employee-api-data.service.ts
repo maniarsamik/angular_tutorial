@@ -3,10 +3,10 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class EmployeeDataService {
+export class EmployeeApiDataService {
 
   constructor() { }
-  getEmployees() {
+  getApiEmployees() {
     return [
       { id: "1", employeename: "Gopal Joshi", age: 37, gender: "Male" },
       { id: "2", employeename: "Samik Maniar", age: 38, gender: "Male" },

@@ -6,7 +6,7 @@ import { EmployeeDataService } from '../employee-data.service';
   styleUrls: ['./employee-listing.component.css']
 })
 export class EmployeeListingComponent implements OnInit {
-  public employees = []
+  public employees: any = [];
   constructor(private employeeService: EmployeeDataService) { }
 
   ngOnInit(): void {
