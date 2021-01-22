@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { EmployeeApiDataService } from '../employee-api-data.service';
 @Component({
   selector: 'app-employee-listing-using-api',
   templateUrl: './employee-listing-using-api.component.html',
@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeListingUsingApiComponent implements OnInit {
 
-  constructor() { }
+  public employeesApi: any = [];
+  constructor(private employeeService: EmployeeApiDataService) { }
 
   ngOnInit(): void {
+    this.employeesApi = this.employeeService.getApiEmployees();
   }
-
 }
