@@ -11,7 +11,7 @@ export class EmployeeDetailsUsingApiComponent implements OnInit {
   constructor(private employeeService: EmployeeApiDataService) { }
 
   ngOnInit(): void {
-    this.employeesApi = this.employeeService.getApiEmployees();
+    this.employeeService.getApiEmployees().subscribe(data=>this.employeesApi=data);
   }
 
 }

@@ -17,6 +17,7 @@ import { EmployeeDataService } from './employee-data.service';
 import { EmployeeApiDataService } from './employee-api-data.service';
 import { EmployeeListingUsingApiComponent } from './employee-listing-using-api/employee-listing-using-api.component';
 import { EmployeeDetailsUsingApiComponent } from './employee-details-using-api/employee-details-using-api.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { EmployeeDetailsUsingApiComponent } from './employee-details-using-api/e
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
   ],
   providers: [EmployeeDataService, EmployeeApiDataService],
   bootstrap: [AppComponent]
