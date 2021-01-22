@@ -1,0 +1,5 @@
+<h1>classbinding works!</h1>
+<div [class]="testVariable">Class Binding text</div>
+<div [class.changecolor]="isChangeColor">Class Binding text</div>
+
+<div [ngClass]='{"changefontweight": isChangeFontWeight, "changecolor": isChangeColor}'>NG Class Binding text</div>

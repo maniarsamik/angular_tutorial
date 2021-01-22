@@ -1,0 +1,53 @@
+<h1>directive-example ngif works!</h1>
+<div *ngIf="true">
+    Conditional show the content
+</div>
+
+<button (click)="isVariable=!isVariable">Toggle</button>
+<div *ngIf="isVariable">
+    Conditional show the content2
+</div>
+
+<h1>directive-example ngswitch works!</h1>
+
+{{currentDay}}
+<div [ngSwitch]="currentDay">
+    <div *ngSwitchCase="'0'">Sunday</div>
+    <div *ngSwitchCase="'1'">Monday</div>
+    <div *ngSwitchCase="'2'">Tuseday</div>
+    <div *ngSwitchCase="'3'">Wednesday</div>
+    <div *ngSwitchCase="'4'">Thursday</div>
+    <div *ngSwitchCase="'5'">Friday</div>
+    <div *ngSwitchCase="'6'">Saturday</div>
+</div>
+
+
+<h1>directive-example ngFor works!</h1>
+
+{{days}}
+<div *ngFor="let day of days">
+    <ul>
+        <li>{{day}}</li>
+    </ul>
+
+</div>
+
+<h1>directive-example ngswitch + ngFor works!</h1>
+<div [ngSwitch]="currentDay">
+    <div *ngFor="let testday of testdays">
+        <ul>
+            <li *ngSwitchCase="testday.dayNumber">{{testday.dayName}}</li>
+        </ul>
+    </div>
+</div>
+
+<h1>directive-example for tab creation</h1>
+
+<ul class="tab">
+    <li (click)="selectedTab=1">Tab 1</li>
+    <li (click)="selectedTab=2">Tab 2</li>
+    <li (click)="selectedTab=3">Tab 3</li>
+</ul>
+<div *ngIf="selectedTab==1">Tab 1 Content</div>
+<div *ngIf="selectedTab==2">Tab 2 Content</div>
+<div *ngIf="selectedTab==3">Tab 3 Content</div>
