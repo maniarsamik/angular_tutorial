@@ -1,7 +1,8 @@
 <h1>employee-listing API works!</h1>
 
 <ul>
-    <li *ngFor="let employee of employeesApi">
-        {{employee.employeename}}
+    <li (click)="selectedEmployee(employee.id)" *ngFor="let employee of employeesApi">
+        {{employee.id}} {{employee.employeename}}
     </li>
 </ul>
+{{error}}

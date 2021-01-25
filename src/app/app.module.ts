@@ -18,6 +18,8 @@ import { EmployeeApiDataService } from './employee-api-data.service';
 import { EmployeeListingUsingApiComponent } from './employee-listing-using-api/employee-listing-using-api.component';
 import { EmployeeDetailsUsingApiComponent } from './employee-details-using-api/employee-details-using-api.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PageLayoutComponent } from './page-layout/page-layout.component';
+import { SingleEmployeeDetailsComponent } from './single-employee-details/single-employee-details.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { HttpClientModule } from '@angular/common/http';
     EmployeeListingComponent,
     EmployeeDetailsComponent,
     EmployeeListingUsingApiComponent,
-    EmployeeDetailsUsingApiComponent
+    EmployeeDetailsUsingApiComponent,
+    PageLayoutComponent,
+    SingleEmployeeDetailsComponent
   ],
   imports: [
     BrowserModule,
